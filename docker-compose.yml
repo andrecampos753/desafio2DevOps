@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0.39-bookworm
+    container_name: curso_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: {$passwdRoot}
+      MYSQL_DATABASE: docker_db
+      MYSQL_USER: docker_usr
+      MYSQL_PASSWORD: docker_pwd
+    ports:
+      - "3306:3306"
+    
